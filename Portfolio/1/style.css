@@ -1,0 +1,285 @@
+
+*{
+    margin: 0;
+    padding: 0;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+.container{
+    display: flex;
+}
+.sidebar{
+    position: absolute;
+    background-color: grey;
+    width: 250px;
+    height: 100vh;
+    transition: transform 0.3s ease-in;
+}
+.sidebar nav{
+    padding: 20px 35px;
+}
+.sidebar nav li{
+    list-style: none;
+    font-size: 30px;
+    padding: 40px 0px;
+}
+.sidebar li a{
+    text-decoration: none;
+    color: white;
+}
+.sidebar li a:hover{
+    transition: ease-in-out 0.15s;
+    text-decoration: underline;
+    color: blue;
+}
+
+.main{
+    /* background-color: yellow; */
+    width: 85vw;
+}
+.devContainer{
+    /* background-color: blue; */
+    height: 58vh;
+    width: 70vw;
+    margin: 144px auto;
+    display: flex;
+    justify-content: space-around;
+}
+.devInfo{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 16px;
+}
+.hello{
+    font-size: 3em;
+}
+.name{
+    font-size: 3em;
+    font-weight: bold;
+    font-family: monospace;
+}
+.about{
+    font-size: 2.5em;
+    margin-top: 11px;
+}
+.moreAbout{
+    font-size: 2em;
+    margin-top: 12px;
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+.buttons{
+    margin-top: 34px;
+    font-size: 16px;
+}
+
+.btn{
+    padding: 12px 20px;
+    border-radius: 28px;
+    color: white;
+    background-color: dodgerblue;
+    font-weight: bold;
+    font-size: 2em;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    margin: 3px 3px;
+    cursor: pointer;
+}
+.btn:hover{
+    background-color: aliceblue;
+    color: blue;
+    transition: ease-in-out 200ms;
+}
+.btn-sm{
+    font-size: 14px;
+    padding: 8px 9px;
+    width: 111px;
+}
+
+.devPic img{
+    height: 55vh;
+}
+
+
+.contactform{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    padding: 0px 0px 0px 34px;
+    margin: 111px;
+}
+
+.contactform h2{
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    /* padding: 12px 0; */
+}
+
+.contactform form div{
+    padding: 10px 0;
+    display: flex;
+    flex-direction: column;
+}
+.contactform form div input{
+    /* width: 20vw; */
+    border-radius: 5px;
+    margin: 5px 0 0 0;
+    padding: 3px;
+}
+.contactform form {
+    margin: 0 40px;
+}
+
+#emailHelp{
+    font-size: 14px;
+    padding: 0px 0px 10px 0px;
+    color: midnightblue;
+}
+#form-check {
+    flex-direction: row;
+}
+#form-check input{
+    width: 26px;
+    margin: 1px 0;
+}
+
+.blogContainer{
+    margin: 78px 111px;
+}
+.blogItem{
+    margin: 30px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+h1{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 43px;
+}
+p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+}
+
+.intro{
+    margin: 78px 111px;
+}
+.intro h2{
+    font-family: Arial, Helvetica, sans-serif;
+    margin: 12px;
+}
+.intro p{
+    font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    margin: 12px;
+}
+
+.skillContainer{
+    padding: 12px;
+}
+.skillItem{
+    display: flex;
+    /* flex-direction: column; */
+    align-items: center;
+    text-decoration: underline;
+    font-size: 17px;
+    font-weight: 600;
+}
+
+/* .skill{
+    width: 265px;
+    height: 6px;
+    background-color: red;
+    border: 3px solid black;
+    border-radius: 12px;
+}
+.s100{
+    width: 265px;
+}
+.s75{
+    width: 195px;
+}
+.s50{
+    width: 130px;
+}
+.s25{
+    width: 65px;
+} */
+
+
+.service{
+    margin: 78px 111px;
+}
+.gallerycontainer h2 {
+  text-align: center;
+}
+.gallery {
+  display: flex;
+  width: 15%;
+  height: 250px;
+  gap: 5px;
+  /* margin-left: 40vw; */
+  /* justify-content: center; */
+}
+.gallery > img {
+  width: 25%;
+  aspect-ratio: 1/1;
+  object-fit: cover;
+  border: 2px solid rgb(0, 0, 0);
+  border-radius: 5px;
+  transition: all ease 0.5s;
+}
+.gallery > img:hover {
+  width: 100%;
+  scale: 1.2;
+}
+
+.resume{
+    margin: 78px 111px;
+}
+.sidebarGo{
+    transform: translate(-443px,0px);
+    position: absolute;
+}
+
+.hamburger{
+    position: absolute;
+    cursor: pointer;
+    top: 11px;
+    left: 11px;
+}
+.ham{
+    margin-top: 10px;
+    margin-left: 10px;
+}
+.cross{
+    margin-left: 185px;
+    margin-top: 10px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+@media (max-width:1200px) {
+    *{
+        background-color:  red;
+    }
+    .devInfo{
+        font-size: 10px;
+    }
+    .devPic{
+        display: none;
+    }
+    .buttons{
+        font-size: 6px;
+    }
+    .intro, .blogContainer, .contactform{
+        margin: 50px 8px;
+    }
+}
+
