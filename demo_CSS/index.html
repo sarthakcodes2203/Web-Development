@@ -1,0 +1,569 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS</title>
+    <!-- For Font from Google Font(Link) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap" rel="stylesheet">
+
+    <style>
+      /* For Font from Google Font(Downloaded) */
+      @font-face {
+        font-family: myFont;
+        src: url(FiraSans-Thin.ttf);
+      }
+      /* From link>>> */
+      /* h1{
+        font-family: Roboto;        
+      } */
+      /* From Downloaded>>> */
+      /* h1{
+        font-family: myFont;
+      } */
+      /* From CSS Properties>>> */
+      /* h1 {
+        font-family: Impact, Haettenschweiler, "Arial Narrow Bold", sans-serif;
+      } */
+
+      p {
+        font-family: "Lucida Sans", "Lucida Sans Regular", "Lucida Grande",
+          "Lucida Sans Unicode", Geneva, Verdana, sans-serif;
+      }
+
+      /* div{
+        background-color: red;
+      } */
+
+      /* PRIORITIES:- Inline Selector > Id Selector > Class or Attribute Selector > Elmement Selector > Universal Selector */
+
+      /* Class Selector */
+      .red {
+        background-color: red;
+      }
+
+      /* ID selector */
+      #green {
+        background-color: green;
+      }
+
+      /* Child selector */
+      div > p {
+        color: blue;
+        background-color: brown;
+      }
+
+      /* descendant selector */
+      div p {
+        color: blue;
+        background-color: brown;
+      }
+
+      /* Universal selectors */
+      /* *{
+                  margin:0;
+                  padding:0;
+              } */
+
+      /* Pseudo selecotr */
+      a:visited {
+        color: pink;
+      }
+
+      a:active {
+        background-color: red;
+      }
+
+      a:hover {
+        background-color: rgb(177, 217, 177);
+      }
+
+      /* Attribute Selector */
+      [data-color="Primary"] {
+        background-color: chocolate;
+      }
+
+      #green :nth-child(odd) {
+        background-color: purple;
+      }
+
+      /* Psuedo Elements */
+      #green::before {
+        content: "Sarthak ";
+      }
+
+      #green::after {
+        color: red;
+        content: "BCA";
+      }
+
+      ::selection {
+        color: rgb(32, 228, 127);
+        background-color: black;
+      }
+
+      .box {
+        background-color: aqua;
+      }
+
+      .box1 {
+        color: rgb(123, 123, 25);
+        padding: 10px;
+        margin: 20px;
+        /* margin: auto; */
+        border: 2px solid blue;
+        height: 200px;
+        box-sizing: border-box;
+      }
+
+      .box2 {
+        color: red;
+        text-shadow: 15px 8px 8px rgb(153, 4, 4);
+        border: 2px solid green;
+        margin: 20px;
+        padding: 34px;
+        box-shadow: 5px 15px 8px #9c9553;
+        outline: 2px solid red;
+        outline-offset: 20px;
+      }
+
+      h2 {
+        font-family: Cambria, Cochin, Georgia, Times, "Times New Roman", serif;
+        font-style: oblique;
+        font-weight: bold;
+        font-size: larger;
+        text-decoration: underline;
+        text-decoration-color: rgb(221, 44, 44);
+        text-decoration-style: dotted;
+        text-transform: capitalize;
+        border: 2px solid red;
+        width: 30px;
+        text-overflow: ellipsis;
+        overflow: hidden;
+        text-align: center;
+      }
+
+      span {
+        color: blueviolet;
+        /* color:#0BEE0B */
+        /* color:rgb(255,25,255) */
+        /* color: rgba( 65, 142, 65, 0.5); */
+        /* color: hsl(343, 66%, 54%); */
+      }
+
+      .box3 {
+        box-sizing: border-box;
+        border: 2px solid black;
+        /* width:2048px; */
+        width: 50vw;
+        font-size: 2em;
+
+        background-color: aquamarine;
+      }
+
+      .change {
+        display: inline;
+        /* border: 3px solid blue;
+                  display: inline-block;
+                  margin: 5px;
+                  padding: 20px;
+                  width: 308px; */
+        /* display: none; */
+        /* visibility: hidden; */
+      }
+
+      nav ul li {
+        list-style: lower-roman;
+        background-color: yellow;
+        list-style-position: inside;
+        border: 3px solid black;
+      }
+
+      .box4 {
+        width: 120px;
+        height: 205px;
+        border: solid black;
+        overflow: scroll;
+        /* white-space: nowrap; */
+      }
+
+      .abc {
+        height: 120px;
+        width: 290px;
+        border: solid black;
+        margin: 3px;
+        padding: 3px;
+      }
+
+      .a {
+        background-color: aqua;
+        position: sticky;
+        top: 0px;
+        height: 111px;
+        width: 100%;
+      }
+
+      .b {
+        background-color: blue;
+        position: relative;
+        top: 34px;
+        left: 50px;
+        z-index: 1;
+      }
+
+      .c {
+        background-color: brown;
+      }
+
+      :root {
+        --color: blue;
+        --seccolor: rgb(104, 104, 205);
+      }
+
+      .theme {
+        margin: 0;
+        padding: 0;
+        background-color: var(--color);
+      }
+
+      ul {
+        display: flex;
+      }
+
+      li {
+        list-style: none;
+        padding: 34px;
+      }
+
+      ul li:first-child {
+        background-color: #9c9553;
+      }
+
+      .theme2 {
+        margin: 0;
+        padding: 0;
+        background-color: var(--seccolor, black);
+      }
+
+      .device {
+        background-color: darkorange;
+      }
+
+      @media only screen and (max-wdith: 455px) {
+        .device {
+          background-color: black;
+        }
+      }
+
+      .cards {
+        border: 4px solid black;
+        display: flow-root;
+      }
+
+      .card {
+        border: 3px solid red;
+      }
+
+      img {
+        float: left;
+      }
+
+      .cards :nth-child(3) {
+        background-color: aqua;
+        clear: left;
+      }
+
+      .container {
+        border: 2px solid red;
+        display: flex;
+        height: 280px;
+        justify-content: center;
+        align-items: center;
+        flex-direction: row;
+        flex-wrap: wrap;
+        /* gap: 20px;
+                  row-gap: 40px;
+                  column-gap:30px;
+                  gap: 40px 30px; */
+      }
+
+      .item {
+        flex-grow: 1;
+        height: 32px;
+        width: 32px;
+        border: 2px solid black;
+        /* margin: 3px; */
+        background-color: blueviolet;
+      }
+
+      .container2 {
+        border: 2px solid black;
+        display: grid;
+        grid-template-columns: 120px 100px;
+        justify-content: center;
+        justify-items: center;
+      }
+      .item2 {
+        border: 1px solid rgb(0, 255, 42);
+        height: 50px;
+        width: 50px;
+      }
+
+      .container3 {
+        padding: 50px;
+        width: 50vw;
+        height: 80px;
+        border: 2px solid purple;
+      }
+      .item3 {
+        height: 50px;
+        width: 50px;
+        border: 2px solid black;
+        background-color: beige;
+        /* transform: rotate(0.25turn); */
+        /* transform: rotate(40deg); */
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
+
+      .container4 {
+        border: 4px solid black;
+        height: 10vh;
+        width: 30vh;
+      }
+      .item4 {
+        background-color: aquamarine;
+        width: 5vw;
+        height: 3vh;
+        /* transition-property: transform;
+              transition-duration: 3s;
+              transition-timing-function:ease-in-out ; */
+              transition-delay: 1s;
+        transition: all 3s ease-in-out 1s;
+      }
+      .translate {
+        transform: translateX(50%) translateY(50%);
+      }
+
+      .container5 {
+        background-color: #9c9553;
+        height: 30vh;
+        width: 30vw;
+      }
+      .item5 {
+        height: 30px;
+        width: 45px;
+        background-color: aqua;
+        /* animation: anime;
+              animation-duration: 3s;
+              animation-iteration-count: 2;
+              animation-timing-function: ease-in-out;
+              animation-delay: 1s;
+              animation-direction: reverse;
+              animation-play-state: running; */
+        animation: anime 5s ease-in-out 3s 3, anime2 5s linear 3s 3;
+      }
+      @keyframes anime {
+        from {
+          background-color: red;
+        }
+        to {
+          transform: translateX(100px);
+          background-color: yellow;
+        }
+      }
+      @keyframes anime2 {
+        0% {
+          transform: rotate(100deg);
+        }
+        25% {
+          transform: rotate(150deg);
+        }
+        50% {
+          transform: rotate(200deg);
+        }
+        75% {
+          transform: rotate(250deg);
+        }
+        100% {
+          transform: rotate(300deg);
+        }
+      }
+
+      .container6 {
+        border: 2px solid black;
+        background-color: aquamarine;
+        width: 800px;
+        height: 400px;
+      }
+      .item6 img {
+        width: 800px;
+        height: 400px;
+        object-fit: contain;
+        /* object-fit: cover;
+        object-position: top right; */
+      }
+
+      .item7 img {
+        filter: blur(2px);
+        /* filter: brightness(200%) contrast(100%) ; */
+      }
+
+    </style>
+  </head>
+
+  <body>
+    <h1>CSS</h1>
+    <p>Hello World, I am Sarthak</p>
+
+    <div class="red">I am a div</div>
+    <br />
+    <div id="green">
+      hey
+      <article>
+        <p>Inside para</p>
+        <p>Inside para2</p>
+        <p>Inside para3</p>
+      </article>
+    </div>
+
+    <a href="https://www.google.com">Go to Google</a>
+    <a href="https://www.facebook.com">Go to Facebook</a>
+
+    <div data-color="Primary">Hello World</div>
+
+    <div class="box box1">I am a box</div>
+    <div class="box box2">I am another box</div>
+
+    <h2>Hey I am Sarthak</h2>
+    <span>I am a BCA student.</span>
+
+    <div class="box3">This is box</div>
+
+    <div class="change">It shows changing between inline&block styles.</div>
+    <div class="change">How are you?</div>
+    <span class="change"> I am a </span>
+    <span class="change">good </span>
+
+    <nav>
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </nav>
+
+    <div class="box4">
+      Hello Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempora ex
+      laboriosam natus nulla dignissimos, veritatis quod maxime, at totam
+      assumenda placeat quibusdam et neque incidunt in porro modi eveniet!
+      Quidem cupiditate blanditiis consectetur sapiente! Quaerat, modi autem. At
+      officiis reiciendis accusantium laboriosam laudantium eos nostrum.
+    </div>
+
+    <div class="abc a">a</div>
+    <div class="abc b">b</div>
+    <div class="abc c">c</div>
+
+    <div class="theme">
+      <ul>
+        <li>Home</li>
+        <li>About</li>
+        <li>Contact</li>
+      </ul>
+    </div>
+    <div class="theme2">
+      Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nostrum dolor,
+      sint incidunt eligendi voluptas sit similique quas iste quidem id maiores
+      debitis nisi hic molestias nihil, voluptatibus praesentium odit commodi.
+      Minus ab beatae obcaecati cumque. Aliquid exercitationem inventore, dicta
+      pariatur optio hic harum quam distinctio?
+    </div>
+
+    <div class="device">Hey I am Sarthak</div>
+
+    <div class="cards">
+      <img src="829012.jpg" alt="image" width="222" />
+      <div class="card">
+        card1 Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni,
+        libero. Voluptates, nulla impedit neque, culpa voluptatibus est, eum
+        architecto error nemo corporis dignissimos?
+      </div>
+      <div class="card">
+        card2 Lorem, ipsum dolor sit amet consectetur adipisicing elit.
+        Consectetur, odit numquam animi mollitia fuga saepe voluptas accusantium
+        labore, fugiat, consequatur nisi earum nesciunt? Maxime libero dolor
+        doloremque, modi perferendis unde labore deserunt nemo est tenetur culpa
+        sequi nihil, temporibus quia magnam provident ut, eius rem. Culpa alias
+        est dignissimos eaque, qui voluptatem modi perferendis veniam veritatis
+        ipsum ex error ipsa ad corrupti, eos perspiciatis, officiis soluta
+        labore. Magnam illum saepe, molestias hic voluptatem ipsam id vel
+        inventore harum ullam veniam, atque libero veritatis delectus maxime
+        totam? Eligendi, delectus earum ipsa maiores sint natus tempora at quas
+        quod rerum dolorem?
+      </div>
+      <div class="card">card3</div>
+    </div>
+
+    <br>
+    <br>
+    <main>
+      <div class="container">
+        <div class="item">1</div>
+        <div class="item">2</div>
+        <div class="item">3</div>
+        <div class="item">4</div>
+        <div class="item">5</div>
+        <div class="item">6</div>
+        <div class="item">7</div>
+        <div class="item">8</div>
+        <div class="item">9</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+        <div class="item">10</div>
+      </div>
+    </main>
+
+    <div class="container2">
+      <div class="item2">a</div>
+      <div class="item2">b</div>
+      <div class="item2">c</div>
+      <div class="item2">d</div>
+      <div class="item2">e</div>
+    </div>
+
+    <div class="container3">
+      <div class="item3">sarthak</div>
+    </div>
+
+    <div class="container4">
+      <div class="item4 translate"></div>
+    </div>
+
+    <div class="container5">
+      <div class="item5"></div>
+    </div>
+
+    <div class="container6">
+      <div class="item6">
+        <img src="829012.jpg" alt="IMAGE"/>
+      </div>
+    </div>
+
+    <div class="item7">
+      <img src="829012.jpg" alt="IMAGE" height="300px" />
+    </div>
+
+  </body>
+</html>

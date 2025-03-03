@@ -1,0 +1,35 @@
+body{
+    background-color: rgb(72, 90, 107);
+    color: white;
+}
+
+td{
+    border:2px solid black;
+}
+
+p{
+    background-color:rgb(70, 77, 77)
+}
+
+a{
+    background-color: rgb(191, 173, 40);
+}
+div{
+    background-color: blueviolet;
+}
+
+span{
+    background-color: black;
+}
+
+.red{   
+ color: blue;
+}
+
+.bg{
+    background-color: yellow;
+}
+
+#firstdiv{
+    background-color: red;
+} 

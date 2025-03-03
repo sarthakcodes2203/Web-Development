@@ -1,0 +1,12 @@
+{
+    "name":"sarthak",
+    "score":11.51,
+    "isAdmin":false,
+    "liscence":null,
+    "shop":["food","clothes","oil"],
+    "obj":{
+        "name":"nested",
+        "marks":90
+    }
+
+}

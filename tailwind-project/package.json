@@ -1,0 +1,16 @@
+{
+  "name": "tailwind-project",
+  "version": "1.0.0",
+  "description": "A project using Tailwind CSS for styling.",
+  "main": "index.html",
+  "scripts": {
+    "build": "npx tailwindcss -i ./src/input.css -o ./src/output.css --watch"
+  },
+  "dependencies": {
+    "tailwindcss": "^2.2.19",
+    "@tailwindcss/cli": "^0.2.1"
+  },
+  "devDependencies": {},
+  "author": "",
+  "license": "ISC"
+}
