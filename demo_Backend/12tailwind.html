@@ -1,0 +1,44 @@
+<!-- 
+ Setting up tailwindcss>>>
+>installing tailwind package
+// npm i -D tailwindcss
+// npm install tailwindcss @tailwindcss/cli
+
+>initializing tailwind package
+// npx tailwindcss init
+
+>create 'tailwind.config.js'
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    // "./src/**/*.{html,js}",
+    // "*.html",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+>create 'src/input.css' +
+// npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+> 'src/output.css' gets created
+>include the output file in the required html pages
+ -->
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="src/output.css">
+</head>
+<body>
+    <div class="container">
+        <div class="bg-blue-500 text-white p-4">
+            <h1 class="text-2xl">Hello World</h1>
+        </div>
+    </div>
+</body>
+</html>

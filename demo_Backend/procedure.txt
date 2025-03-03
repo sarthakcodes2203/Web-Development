@@ -1,0 +1,71 @@
+This folder (demo_backend) contains:
+Node JS
+Express JS 
+MongoDB
+
+
+
+
+
+
+
+
+
+1.initializing npm project>>>(in terminal)
+// nmp init -y
+
+2.installing package(here slugify)>>>
+// npm i slugify
+
+3. Package inmport type>>
+commonjs (default) (no type: module in package.json)
+// const http = require('http');
+es6 (ecmascript 6) ( add type: module in package.json)
+// import http from 'http';
+can also be imported from a module created by module
+// -> part(3)
+
+4.initializing express(already done in '--global')
+// npm i express
+
+5. installing template engine EJS>>>
+// npm i ejs
+
+>Displaying a static html page -- res.sendFile("directory/fileName.html",{root:__dirname}) --is used 
+>Displaying a dynamic html page -- res.render("fileName",{values to be displayed using '<%= variable %>' are passed as objects }) -- the file is placed in a 'views' folder with an '.ejs' extention rather than a '.html' extention
+
+6. Creating database>>>
+// By MongoDB Compass(application)
+create a new connection > create database > create collection > add data > insert document{document_to_be_inserted_in_key_value_pairs}
+// By VS Code(Playground)
+Tap on MongoDB extention > Create MongoDB Playground > give DB name in "use('__');" > give collection name in "db.getCollection('__').insertMany([document_to_be_inserted_in_key_value_pairs])"  
+
+7. installing mongoose>>>
+// npm i mongoose
+
+8. Setting up tailwindcss>>>
+>installing tailwind package
+// npm i -D tailwindcss
+// npm install tailwindcss @tailwindcss/cli
+
+>initializing tailwind package
+// npx tailwindcss init
+
+>create 'tailwind.config.js'
+/** @type {import('tailwindcss').Config} */
+module.exports = {
+  content: [
+    // "./src/**/*.{html,js}",
+    // "*.html",
+  ],
+  theme: {
+    extend: {},
+  },
+  plugins: [],
+};
+
+>create 'src/input.css' +
+// npx @tailwindcss/cli -i ./src/input.css -o ./src/output.css --watch
+> 'src/output.css' gets created
+>include the output file in the required html pages
+
