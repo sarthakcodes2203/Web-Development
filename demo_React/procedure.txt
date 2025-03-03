@@ -1,0 +1,15 @@
+1.Creating a React App>>>
+// npx create-react-app 1reactapp
+# A project (directory) with the name '1reactapp' gets created which is also a node/npm project
+
+2. Starting the react app>>>
+// npm start (being inside the project directory)
+
+--For making changes in the project, we use src/app.js
+--Create files inside components folder to be reused
+
+---All more details are available in the 'README.md' file generated in a project
+
+3. Creating vite app >>> (Used for structuring folders in a react app)
+// npm create vite@latest
+-Provide Project name, package name; Select framework(react), variant(Javascript) 
