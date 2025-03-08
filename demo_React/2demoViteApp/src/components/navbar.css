@@ -1,0 +1,11 @@
+nav,ul{
+    color: white;
+    display: flex;
+}
+li{
+    list-style-type: none;
+    margin: 10px;
+}
+nav{
+    background-color: gray;
+}

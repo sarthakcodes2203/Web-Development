@@ -1,0 +1,21 @@
+>Include react router 
+// npm i react-router-dom 
+it is used to switch between pages with refreshing the site
+(here as done in contact,home,about)
+
+> For form handling
+// npm install react-hook-form
+
+> For backend storing (database/server.js)
+// npm i express
+// cd database
+// nodemon server.js
+
+> For request err
+// npm i cors
+// npm i body-parser
+
+> Using redux
+//  npm install @reduxjs/toolkit react-redux
+# used to render data through several pages without use of props from a single store 
+Do Changes in main.jsx and store.js
