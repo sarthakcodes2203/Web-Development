@@ -1,0 +1,8 @@
+commands used>>>
+// npm create vite@latest
+// npm i
+// npm run dev
+// npm install tailwindcss @tailwindcss/vite
+> Then edited vite.config.js and index.css according to tailwindcss.com/docs
+
+-> The data is stored using 'local storage' and not MongoDB
